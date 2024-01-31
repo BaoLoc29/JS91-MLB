@@ -1,6 +1,8 @@
 const PhuKien = () => {
-    <div className="phu-kien">
-
-    </div>
+    return (
+        <div className="phu-kien">
+            <h1>Phụ kiện</h1>
+        </div>
+    );
 }
 export default PhuKien;

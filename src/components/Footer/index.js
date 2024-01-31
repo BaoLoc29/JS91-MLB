@@ -36,22 +36,22 @@ const Footer = () => {
                         <h2 className="footer-title">Thanh toán</h2>
                         <ul className="list-item">
                             <li>
-                                <Link to="/he-thong-cua-hang" >Visa / Mastercard / JCB</Link>
+                                <Link to="/" >Visa / Mastercard / JCB</Link>
                             </li>
                             <li>
-                                <Link to="/lien-he" >ATM / Internet Banking</Link>
+                                <Link to="/" >ATM / Internet Banking</Link>
                             </li>
                             <li>
-                                <Link to="/chinh-sach-bao-mat" >Quét mã QR</Link>
+                                <Link to="/" >Quét mã QR</Link>
                             </li>
                             <li>
-                                <Link to="/dieu-khoan-su-dung" >Mua trước trả sau</Link>
+                                <Link to="/" >Mua trước trả sau</Link>
                             </li>
                             <li>
-                                <Link to="/chinh-sach-van-chuyen" >Ví điện tử</Link>
+                                <Link to="/" >Ví điện tử</Link>
                             </li>
                             <li>
-                                <Link to="/chinh-sach-thanh-toan" >Thanh toán khi nhận hàng (COD)</Link>
+                                <Link to="/" >Thanh toán khi nhận hàng (COD)</Link>
                             </li>
                         </ul>
                     </div>
