@@ -2,3 +2,7 @@
 .banner {
   width: 100%;
 }
+
+.container{
+  display: flex;
+}

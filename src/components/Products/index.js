@@ -1,58 +1,86 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import PRODUCTS from '../../api/ProductsData';
 import './style.css';
 
 const Products = () => {
-    const [selectedColor, setSelectedColor] = useState('white');
+    const [products, setProducts] = useState(PRODUCTS);
+    const handleChooseColor = (id, color) => {
+        setProducts((prev) => {
+            return prev.map((product) => {
+                if (product.id === id) {
+                    let newCheckImg = {};
+                    //Change all property checkImg false, but color clicked = true
+                    Object.keys(product.checkImg).map((item) => {
+                        product.checkImg[item] = false;
+                        newCheckImg = { ...product.checkImg, [color]: true };
+                        return null;
+                    });
 
-    const handleColorChange = (event) => {
-        setSelectedColor(event.target.id);
+                    return { ...product, checkImg: newCheckImg };
+                } else {
+                    return product;
+                }
+            });
+        });
     };
 
     return (
-        <div className="card">
-            <div className="basicInfo">
-                <div className="images">
-                    <div className="img">
-                        <div className="item">
-                            <input type="radio" name="color" id="white" checked={selectedColor === 'white'} onChange={handleColorChange}></input>
-                            <img src="https://product.hstatic.net/200000642007/product/50whs_3asxclr3n_2_dbabf90e4a464749a2d3f595328317e9_d1b731d275f046579f9b112f224ebe4b_grande.jpg" alt='img-product'></img>
+        products.map((product) => (
+            <div className="card" key={product.id}>
+                <div className="basicInfo">
+                    <div className="images">
+                        <div className="colors">
+                            {product.colors.map((color) => (
+                                <div
+                                    key={color}
+                                    className={` ${product.checkImg[color] && 'active'}   `}
+                                    style={{
+                                        marginRight: '10px',
+                                        backgroundColor: color,
+                                        width: 25,
+                                        height: 25,
+                                        borderRadius: '50%',
+                                        cursor: 'pointer',
+                                    }}
+                                    onClick={() => handleChooseColor(product.id, color)}
+                                ></div>
+                            ))}
                         </div>
-                        <div className="item">
-                            <input type="radio" name="color" id="black" checked={selectedColor === 'black'} onChange={handleColorChange}></input>
-                            <img src="https://product.hstatic.net/200000642007/product/50bks_3lpqm0333_2_58a0da1d851640be8ec6f72e4de32850_6774837eebde4af5a0d56b0310fb6265_grande.jpg" alt='img-product'></img>
+                        <div className="img">
+                            {Object.keys(product.checkImg).map((item) => {
+                                if (product.checkImg[item]) {
+                                    return (
+                                        <img
+                                            key={item}
+                                            src={product.linkImg[item]}
+                                            alt={product.name}
+                                        />
+                                    );
+                                } else {
+                                    return null;
+                                }
+                            })}
                         </div>
+
+                    </div>
+                    <div className='title'>
+                        <div className="name">{product.name}</div>
+                    </div><div className="addCard">
+                        <i className="fa-solid fa-basket-shopping"></i>
                     </div>
                 </div>
-                <div className="colors">
-                    <label htmlFor="white">
-                        <div className="name">white</div>
-                        <div className="ellipse" style={{ background: '#B6D5E0' }}></div>
-                    </label>
-
-                    <label htmlFor="black">
-                        <div className="name">Black</div>
-                        <div className="ellipse" style={{ background: '#2B2B2B' }}></div>
-                    </label>
-                </div>
-                <div className='title'>
-                    <div className="name">Giày sneakers unisex cổ thấp Chunky Liner Mid Lux</div>
-                </div>
-                <div className="addCard">
-                    <i className="fa-solid fa-basket-shopping"></i>
+                <div className="mores">
+                    <div className="stars">
+                        <i className="fa-regular fa-star text-yellow"></i>
+                        <i className="fa-regular fa-star text-yellow"></i>
+                        <i className="fa-regular fa-star text-yellow"></i>
+                        <i className="fa-regular fa-star text-yellow"></i>
+                        <i className="fa-regular fa-star"></i>
+                    </div>
+                    <div className="price">{product.price}</div>
                 </div>
             </div>
-            <div className="mores">
-                <div className="stars">
-                    <i className="fa-regular fa-star text-yellow"></i>
-                    <i className="fa-regular fa-star text-yellow"></i>
-                    <i className="fa-regular fa-star text-yellow"></i>
-                    <i className="fa-regular fa-star text-yellow"></i>
-                    <i className="fa-regular fa-star"></i>
-                </div>
-                <div className="price">1,000,000đ</div>
-            </div>
-        </div>
+        ))
     );
 };
-
 export default Products;
