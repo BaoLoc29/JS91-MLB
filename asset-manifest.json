@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/JS91-MLB/static/css/main.f257b0bd.css",
+    "main.js": "/JS91-MLB/static/js/main.fa38b396.js",
+    "static/js/787.6bca649f.chunk.js": "/JS91-MLB/static/js/787.6bca649f.chunk.js",
+    "static/media/background-register.png": "/JS91-MLB/static/media/background-register.159d55e5ecd355fa844f.png",
+    "static/media/background-login.png": "/JS91-MLB/static/media/background-login.984344d262c8b6a8a63b.png",
+    "index.html": "/JS91-MLB/index.html",
+    "main.f257b0bd.css.map": "/JS91-MLB/static/css/main.f257b0bd.css.map",
+    "main.fa38b396.js.map": "/JS91-MLB/static/js/main.fa38b396.js.map",
+    "787.6bca649f.chunk.js.map": "/JS91-MLB/static/js/787.6bca649f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f257b0bd.css",
+    "static/js/main.fa38b396.js"
+  ]
+}
