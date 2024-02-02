@@ -54,6 +54,7 @@ const RegisterForm = () => {
                 });
                 const data = await response.json();
                 console.log(data); // log the response data
+                alert('Đăng ký thành công. Đến đăng nhập ngay!');
                 navigate('/account/login');
             } catch (error) {
                 console.error('Error:', error);

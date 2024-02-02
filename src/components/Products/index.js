@@ -23,6 +23,17 @@ const Products = () => {
             });
         });
     };
+    function StarRating({ rating }) {
+        return (
+            <div>
+                {Array(5).fill().map((_, i) => (
+                    <span key={i} style={{color: 'white'}}>
+                        {i < rating ? '⭐' : '☆'}
+                    </span>
+                ))}
+            </div>
+        );
+    }
 
     return (
         products.map((product) => (
@@ -70,13 +81,7 @@ const Products = () => {
                     </div>
                 </div>
                 <div className="mores">
-                    <div className="stars">
-                        <i className="fa-regular fa-star text-yellow"></i>
-                        <i className="fa-regular fa-star text-yellow"></i>
-                        <i className="fa-regular fa-star text-yellow"></i>
-                        <i className="fa-regular fa-star text-yellow"></i>
-                        <i className="fa-regular fa-star"></i>
-                    </div>
+                    <StarRating rating={product.rating} />
                     <div className="price">{product.price}</div>
                 </div>
             </div>

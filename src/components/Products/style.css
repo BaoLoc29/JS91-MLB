@@ -10,7 +10,7 @@
   --yellowd: #ffc107;
 }
 .card {
-  margin: 50px 10px;
+  margin: 50px 20px;
   border-radius: 35px;
   width: 300px;
   background-color: var(--dark);
@@ -42,7 +42,7 @@
   text-align: center;
 }
 .card .img img {
-  z-index: 10;
+  /* z-index: 10; */
   width: 100%;
   transition: 0.5s;
   transform: scale(1.2);
@@ -65,10 +65,7 @@
 
 .colors {
   display: flex;
-  margin-left: 150px;
-  position: absolute;
-  z-index: 100;
-  top: 40px;
+  justify-content: flex-end;
 }
 .mores {
   padding: 25px;
