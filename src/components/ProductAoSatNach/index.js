@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import PRODUCTS from '../../api/ProductsData';
-import './style.css';
+import DATAAO from '../../api/DataAo';
 
-const Products = () => {
-    const [products, setProducts] = useState(PRODUCTS);
+const ProductAoSatNach = () => {
+    // const [products, setProducts] = useState(DATAAO);
+    const [products, setProducts] = useState(DATAAO.filter(product => product.category === 'Áo sát nách'));
+
     const handleChooseColor = (id, color) => {
         setProducts((prev) => {
             return prev.map((product) => {
@@ -27,7 +28,7 @@ const Products = () => {
         return (
             <div>
                 {Array(5).fill().map((_, i) => (
-                    <span key={i} style={{color: 'white'}}>
+                    <span key={i} style={{ color: 'white' }}>
                         {i < rating ? '⭐' : '☆'}
                     </span>
                 ))}
@@ -36,7 +37,8 @@ const Products = () => {
     }
 
     return (
-        products.map((product) => (
+        <div className='products'>
+            {products.map((product) => (
             <div className="card" key={product.id}>
                 <div className="basicInfo">
                     <div className="images">
@@ -85,7 +87,8 @@ const Products = () => {
                     <div className="price">{product.price}</div>
                 </div>
             </div>
-        ))
+            ))}
+        </div>
     );
 };
-export default Products;
+export default ProductAoSatNach;
