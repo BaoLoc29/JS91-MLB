@@ -1,0 +1,71 @@
+.ao {
+  margin: 0 50px;
+}
+.ao h2 {
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  padding: 0 32px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+.wrapper-title-collection {
+  display: flex;
+  padding: 0 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.option-filter-collection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 350px;
+}
+.collection {
+  padding: 1px 0;
+  background-color: white;
+  position: sticky;
+  z-index: 4;
+  top: 54px;
+}
+.title-collection {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.filter-collection {
+  padding: 10px 12px 10px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.filter-collection span {
+  margin-right: 20px;
+}
+.sort-collection {
+  padding: 10px 12px 10px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.sort-collection span {
+  margin-right: 120px;
+}

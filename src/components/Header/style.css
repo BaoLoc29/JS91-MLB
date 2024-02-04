@@ -13,6 +13,9 @@ a {
   display: flex;
   font-weight: bold;
   background-color: white;
+  position: sticky;
+  z-index: 9;
+  top: 0;
 }
 
 .nav-menu {
@@ -21,7 +24,7 @@ a {
   margin: 0 40px;
   padding: 0;
 }
-.nav-menu li{
+.nav-menu li {
   position: relative;
 }
 .nav-menu li a {
@@ -43,11 +46,11 @@ a {
   text-align: start;
   list-style: none;
   width: 150px;
-  display: none; 
+  display: none;
 }
 
 /* hiện menu con */
-.nav-menu li:hover>ul.sub-menu {
+.nav-menu li:hover > ul.sub-menu {
   display: block;
 }
 
@@ -57,7 +60,7 @@ a {
   left: 0;
 }
 
-.nav-menu li ul.sub-menu li:hover>a {
+.nav-menu li ul.sub-menu li:hover > a {
   border-bottom: 1px solid #ffc107;
   color: #ffc107;
 }
