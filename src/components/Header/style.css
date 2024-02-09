@@ -9,7 +9,7 @@ a {
 }
 
 .header {
-  margin: 0 50px;
+  padding: 0 50px;
   display: flex;
   font-weight: bold;
   background-color: white;
@@ -65,9 +65,9 @@ a {
   color: #ffc107;
 }
 
-.nav-menu li ul.sub-menu li:last-child a {
+/* .nav-menu li ul.sub-menu li:last-child a {
   border: none;
-}
+} */
 
 /* menu cấp 3 */
 .nav-menu ul.sub-menu ul.sub-menu {

@@ -4,7 +4,7 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 import { TbListSearch } from "react-icons/tb";
 const AoSoMi = () => {
     return (
-        <div className='ao'>
+        <div className='out-fit'>
             <h2>Áo sơ mi</h2>
             <div className='collection'>
                 <div className='title-collection'>

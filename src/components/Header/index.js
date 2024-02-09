@@ -23,17 +23,23 @@ const Header = () => {
                                     <li><Link to="/ao-sat-nach">Áo sát nách</Link></li>
                                 </ul>
                             </li>
-                            
+
                             <li>
                                 <Link to="/quan">Quần</Link>
                                 <ul className='sub-menu'>
                                     <li><Link to="/quan-jogger">Quần jogger</Link></li>
                                     <li><Link to="/quan-short">Quần short</Link></li>
-                                    <li><Link to="/quan-jean">Quần jean</Link></li>
                                 </ul>
                             </li>
-                            
-                            <li><Link to="/danh-cho-nu">Dành cho nữ</Link></li>
+
+                            <li>
+                                <Link to="/danh-cho-nu">Dành cho nữ</Link>
+                                <ul className='sub-menu'>
+                                    <li><Link to="/ao-nu">Áo nữ</Link></li>
+                                    <li><Link to="/quan-nu">Quần nữ</Link></li>
+                                    <li><Link to="/chan-vay">Chân váy</Link></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -49,13 +55,11 @@ const Header = () => {
                     <li>
                         <Link to="/tui-vi">TÚI VÍ</Link>
                         <ul className='sub-menu'>
-                            <li><Link to="/tui-deo-cheo">Túi đeo chéo</Link></li>
-                            <li><Link to="/tui-bao-tu">Túi bao tử</Link></li>
                             <li><Link to="/balo">Balo</Link></li>
+                            <li><Link to="/tui-xach">Túi xách</Link></li>
+                            <li><Link to="/tui-bao-tu">Túi bao tử</Link></li>
+                            <li><Link to="/tui-deo-cheo">Túi đeo chéo</Link></li>
                         </ul>
-                    </li>
-                    <li>
-                        <Link to="/phu-kien">PHỤ KIỆN</Link>
                     </li>
                     <li>
                         <Link to="/sales">SALES</Link>

@@ -5,7 +5,7 @@ import ProductAoKhoac from '../../components/ProductAoKhoac';
 // import './style.css'
 const AoKhoac = () => {
     return (
-        <div className='ao'>
+        <div className='out-fit'>
             <h2>Áo khoác</h2>
             <div className='collection'>
                 <div className='title-collection'>
