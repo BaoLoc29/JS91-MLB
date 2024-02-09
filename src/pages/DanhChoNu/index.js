@@ -1,9 +1,46 @@
-import { Outlet } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
+import { TbListSearch } from "react-icons/tb";
+import './style.css'
+import ProductNu from '../../components/ProductNu';
 const DanhChoNu = () => {
     return (
-        <div className="danh-cho-nu">
-            <h1>Dành cho nữ</h1>
-            <Outlet/>
+        <div className='out-fit'>
+            <h2>Dành cho nữ</h2>
+            <div className='collection'>
+                <div className='title-collection'>
+                    <div className='title-collection-inner'>
+                        <ol className='breadcrumb'>
+                            <li className='breadcrumb-item'>
+                                <Link itemprop='name' to='/'>Trang chủ</Link>
+                                <IoIosArrowForward />
+                            </li>
+                            <li className='breadcrumb-item'>
+                                <span itemprop='name'>Danh mục</span>
+                                <IoIosArrowForward />
+                            </li>
+                            <li className='breadcrumb-item active'>
+                                <span itemprop='name'>Dành cho nữ</span>
+                            </li>
+                        </ol>
+                    </div>
+                    <div className='wrapper-title-collection'>
+                        <div className='option-filter-collection'>
+                            <div className='filter-collection'>
+                                <span>Bộ lọc</span>
+                                <TbListSearch style={{ fontSize: 18 }} />
+                            </div>
+                            <div className='sort-collection'>
+                                <span>Sắp xếp</span>
+                                <IoIosArrowDown style={{ fontSize: 18 }} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='list-product-nu'>
+                <ProductNu />
+            </div>
         </div>
     );
 }

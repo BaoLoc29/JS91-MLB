@@ -7,7 +7,7 @@ import { TbListSearch } from "react-icons/tb";
 import './style.css'
 const Ao = () => {
     return (
-        <div className='ao'>
+        <div className='out-fit'>
             <h2>Áo unisex</h2>
             <div className='collection'>
                 <div className='title-collection'>

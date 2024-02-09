@@ -4,7 +4,7 @@ import { TbListSearch } from "react-icons/tb";
 import ProductAoThun from '../../components/ProductAoThun';
 const AoThun = () => {
     return (
-        <div className='ao'>
+        <div className='out-fit'>
             <h2>Áo thun</h2>
             <div className='collection'>
                 <div className='title-collection'>

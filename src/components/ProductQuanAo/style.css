@@ -1,6 +1,6 @@
 .products {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
@@ -12,17 +12,17 @@
   --yellowd: #ffc107;
 }
 .card {
-  margin: 10px 0;
+  margin: 7px;
   border-radius: 35px;
   width: 340px;
   background-color: var(--dark);
-  height: auto;
 }
 .basicInfo {
   background-color: var(--whited);
   border-radius: 30px;
   padding: 20px;
   position: relative;
+  height: 490px;
 }
 .title .category,
 .title {
@@ -43,6 +43,7 @@
   overflow: hidden;
   cursor: pointer;
   text-align: center;
+  height: 377px;
 }
 .card .img img {
   /* z-index: 10; */
