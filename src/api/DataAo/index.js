@@ -1266,6 +1266,7 @@ const DATAAO = [
         id: 69,
         name: 'Áo polo unisex tay ngắn Cube Monogram All Over',
         price: '4,920,000đ',
+        discount: null,
         colors: ['#544E4E', '#323F80'],
         category: 'Áo polo',
         rating: 4,

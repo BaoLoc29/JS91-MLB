@@ -7,27 +7,58 @@ import DATATUI from '../../api/DataTui';
 import DATANON from '../../api/DataNon';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import ReactPaginate from 'react-paginate';
 import './style.css';
 
 const Search = ({ searchTerm }) => {
     const [products, setProducts] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 12;
+    // Get the current items for the current page
+    const offset = currentPage * itemsPerPage;
+    const currentItems = searchResults.slice(offset, offset + itemsPerPage);
 
+    // Handle page change
+    const handlePageClick = ({ selected }) => {
+        setCurrentPage(selected);
+    };
+    const handleChooseColor = (id, color) => {
+        setProducts((prev) => {
+            return prev.map((product) => {
+                if (product.id === id) {
+                    let newCheckImg = {};
+                    //Change all property checkImg false, but color clicked = true
+                    Object.keys(product.checkImg).map((item) => {
+                        product.checkImg[item] = false;
+                        newCheckImg = { ...product.checkImg, [color]: true };
+                        return null;
+                    });
+
+                    return { ...product, checkImg: newCheckImg };
+                } else {
+                    return product;
+                }
+            });
+        });
+    };
     useEffect(() => {
         Promise.all([DATAQUAN, DATAAO, DATANU, DATAGIAY, DATATUI, DATANON])
             .then(([dataQuan, dataAo, dataNu, dataGiay, dataTui, dataNon]) => {
                 const combinedData = [...dataQuan, ...dataAo, ...dataNu, ...dataGiay, ...dataTui, ...dataNon];
                 setProducts(combinedData);
-                setIsLoading(false);
             })
             .catch((error) => {
                 setError(error.message);
-                setIsLoading(false);
             });
     }, []);
-
+    // sự kiện xảy ra khi người dùng nhập vào trong input tìm kiếm
+    useEffect(() => {
+        // đặt setSearchResults về mảng trống khi input bị thay đổi
+        setSearchResults([]);
+    }, [searchTerm]);
     useEffect(() => {
         if (searchTerm) {
             const results = products.filter((product) =>
@@ -71,10 +102,8 @@ const Search = ({ searchTerm }) => {
             <div className='products'>
                 {error ? (
                     <div>Error: {error}</div>
-                ) : isLoading ? (
-                    <div>Loading...</div>
                 ) : (
-                    searchResults.map((product) => (
+                    currentItems.map((product) => (
                         <div className="card" key={product.id}>
                             <div className="basicInfo">
                                 <div className="images">
@@ -86,11 +115,12 @@ const Search = ({ searchTerm }) => {
                                                 style={{
                                                     marginRight: '10px',
                                                     backgroundColor: color,
-                                                    width:   25,
-                                                    height:   25,
+                                                    width: 25,
+                                                    height: 25,
                                                     borderRadius: '50%',
                                                     cursor: 'pointer',
                                                 }}
+                                                onClick={() => handleChooseColor(product.id, color)}
                                             ></div>
                                         ))}
                                     </div>
@@ -126,6 +156,28 @@ const Search = ({ searchTerm }) => {
                         </div>
                     ))
                 )}
+                <div className='pages'>
+                <ReactPaginate
+                    previousLabel={<IoIosArrowBack />}
+                    nextLabel={<IoIosArrowForward />}
+                    breakLabel={'...'}
+                    breakClassName={'break-me'}
+                    pageCount={Math.ceil(searchResults.length / itemsPerPage)}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+
+                    pageClassName="page-item"
+                    pageLinkClassName="page-link"
+                    previousClassName="page-item"
+                    previousLinkClassName="page-link"
+                    nextClassName="page-item"
+                    nextLinkClassName="page-link"
+                    breakLinkClassName="page-link"
+                    containerClassName="pagination"
+                    activeClassName="active"
+                />
+            </div>
             </div>
         </div>
     );

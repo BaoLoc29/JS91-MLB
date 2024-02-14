@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Import CSS cho hiệu ứng blur
 import DATANU from '../../api/DataNu';
-
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import ReactPaginate from 'react-paginate';
 const ProductNu = () => {
     const [products, setProducts] = useState(DATANU);
-
+    const [currentPage, setCurrentPage] = useState(0); 
+    const itemsPerPage = 12; 
     const handleChooseColor = (id, color) => {
         setProducts((prev) => {
             return prev.map((product) => {
@@ -38,9 +40,17 @@ const ProductNu = () => {
         );
     }
 
+    // Get the current items for the current page
+    const offset = currentPage * itemsPerPage;
+    const currentItems = products.slice(offset, offset + itemsPerPage);
+
+    // Handle page change
+    const handlePageClick = ({ selected }) => {
+        setCurrentPage(selected);
+    };
     return (
         <div className='products'>
-            {products.map((product) => (
+            {currentItems.map((product) => (
                 <div className="card" key={product.id}>
                     <div className="basicInfo">
                         <div className="images">
@@ -78,11 +88,11 @@ const ProductNu = () => {
                                     }
                                 })}
                             </div>
+
                         </div>
                         <div className='title'>
                             <div className="name">{product.name}</div>
-                        </div>
-                        <div className="addCard">
+                        </div><div className="addCard">
                             <i className="fa-solid fa-basket-shopping"></i>
                         </div>
                     </div>
@@ -92,6 +102,28 @@ const ProductNu = () => {
                     </div>
                 </div>
             ))}
+            <div className='pages'>
+                <ReactPaginate
+                    previousLabel={<IoIosArrowBack />}
+                    nextLabel={<IoIosArrowForward />}
+                    breakLabel={'...'}
+                    breakClassName={'break-me'}
+                    pageCount={Math.ceil(products.length / itemsPerPage)}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+
+                    pageClassName="page-item"
+                    pageLinkClassName="page-link"
+                    previousClassName="page-item"
+                    previousLinkClassName="page-link"
+                    nextClassName="page-item"
+                    nextLinkClassName="page-link"
+                    breakLinkClassName="page-link"
+                    containerClassName="pagination"
+                    activeClassName="active"
+                />
+            </div>
         </div>
     );
 };
