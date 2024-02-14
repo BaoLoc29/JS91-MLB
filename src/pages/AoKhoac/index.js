@@ -6,7 +6,6 @@ import ProductAoKhoac from '../../components/ProductAoKhoac';
 const AoKhoac = () => {
     return (
         <div className='out-fit'>
-            <h2>Áo khoác</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

@@ -6,7 +6,6 @@ import ProductTuiVi from '../../components/ProductTuiVi';
 const TuiVi = () => {
     return (
         <div className='out-fit'>
-            <h2>Túi ví</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

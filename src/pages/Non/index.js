@@ -5,7 +5,6 @@ import ProductNon from '../../components/ProductNon';
 const Non = () => {
     return (
         <div className='out-fit'>
-            <h2>Mũ - nón</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

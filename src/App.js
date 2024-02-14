@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import './App.css';
 import Header from './components/Header';
@@ -34,9 +35,14 @@ import QuanNu from './pages/QuanNu';
 import ChanVay from './pages/ChanVay';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
   return (
     <div className="App">
-      <Header />
+      <Header onSearch={handleSearch} searchTerm={searchTerm}/>
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/quan-ao" element={<QuanAo />} />
@@ -67,14 +73,14 @@ function App() {
         <Route path='/tui-xach' element={<TuiXach />} />
         <Route path='/tui-bao-tu' element={<TuiBaoTu />} />
         <Route path='/balo' element={<Balo />} />
-        
+
         <Route path='/sales' element={<Sales />} />
 
         <Route path='/account/login' element={<LoginForm />} />
         <Route path='/account/register' element={<RegisterForm />} />
 
         <Route path='/cart' element={<Cart />} />
-        <Route path='/search' element={<Search />} />
+        <Route path='/search' element={<Search searchTerm={searchTerm} onSearch={handleSearch}/>} />
 
 
         <Route path="*" element={<h1>Page not found</h1>} />

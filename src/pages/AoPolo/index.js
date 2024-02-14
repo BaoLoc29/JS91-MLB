@@ -5,7 +5,6 @@ import ProductAoPolo from '../../components/ProductAoPolo';
 const AoPolo = () => {
     return (
         <div className='out-fit'>
-            <h2>Áo polo</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

@@ -5,7 +5,6 @@ import ProductTuiXach from '../../components/ProductTuiXach';
 const TuiXach = () => {
     return (
         <div className='out-fit'>
-            <h2>Túi xách</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

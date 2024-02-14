@@ -5,7 +5,6 @@ import ProductChanVay from '../../components/ProductChanVay';
 const ChanVay = () => {
     return (
         <div className='out-fit'>
-            <h2>Chân váy</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

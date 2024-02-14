@@ -5,7 +5,6 @@ import ProductQuanNu from '../../components/ProductQuanNu';
 const QuanNu = () => {
     return (
         <div className='out-fit'>
-            <h2>Quần nữ</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

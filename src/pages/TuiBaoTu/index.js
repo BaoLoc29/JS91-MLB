@@ -5,7 +5,6 @@ import ProductTuiBaoTu from '../../components/ProductTuiBaoTu';
 const TuiBaoTu = () => {
     return (
         <div className='out-fit'>
-            <h2>Túi bao tử</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

@@ -5,7 +5,6 @@ import ProductAoThun from '../../components/ProductAoThun';
 const AoThun = () => {
     return (
         <div className='out-fit'>
-            <h2>Áo thun</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

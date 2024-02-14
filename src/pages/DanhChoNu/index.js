@@ -6,7 +6,6 @@ import ProductNu from '../../components/ProductNu';
 const DanhChoNu = () => {
     return (
         <div className='out-fit'>
-            <h2>Dành cho nữ</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

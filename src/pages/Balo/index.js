@@ -5,7 +5,6 @@ import ProductBalo from '../../components/ProductBalo';
 const Balo = () => {
     return (
         <div className='out-fit'>
-            <h2>Balo unisex</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

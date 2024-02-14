@@ -5,7 +5,6 @@ import { TbListSearch } from "react-icons/tb";
 const GiaySneakers = () => {
     return (
         <div className='out-fit'>
-            <h2>Giày sneaker</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>
