@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import DATATUI from '../../api/DataTui';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Import CSS cho hiệu ứng blur
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import ReactPaginate from 'react-paginate';
 const ProductTuiBaoTu = () => {
     const [products, setProducts] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         // Lọc danh sách sản phẩm thuộc danh mục Áo khoác
         const filteredProducts = DATATUI.filter(product => product.category === 'Túi bao tử');
         setProducts(filteredProducts);
-        setIsLoading(false); // Cập nhật trạng thái isLoading sau khi tải xong dữ liệu
     }, []);
+    const [currentPage, setCurrentPage] = useState(0); 
+    const itemsPerPage = 12; 
     const handleChooseColor = (id, color) => {
         setProducts((prev) => {
             return prev.map((product) => {
@@ -44,66 +45,90 @@ const ProductTuiBaoTu = () => {
         );
     }
 
+    // Get the current items for the current page
+    const offset = currentPage * itemsPerPage;
+    const currentItems = products.slice(offset, offset + itemsPerPage);
+
+    // Handle page change
+    const handlePageClick = ({ selected }) => {
+        setCurrentPage(selected);
+    };
     return (
         <div className='products'>
-            {isLoading ? (
-                <div>Loading...</div>
-            )
-                :
-                (
-                    products.map((product) => (
-                        <div className="card" key={product.id}>
-                            <div className="basicInfo">
-                                <div className="images">
-                                    <div className="colors">
-                                        {product.colors.map((color) => (
-                                            <div
-                                                key={color}
-                                                className={` ${product.checkImg[color] && 'active'}   `}
-                                                style={{
-                                                    marginRight: '10px',
-                                                    backgroundColor: color,
-                                                    width: 25,
-                                                    height: 25,
-                                                    borderRadius: '50%',
-                                                    cursor: 'pointer',
-                                                }}
-                                                onClick={() => handleChooseColor(product.id, color)}
-                                            ></div>
-                                        ))}
-                                    </div>
-                                    <div className="img">
-                                        {Object.keys(product.checkImg).map((item) => {
-                                            if (product.checkImg[item]) {
-                                                return (
-                                                    <LazyLoadImage
-                                                        key={item}
-                                                        src={product.linkImg[item]}
-                                                        alt={product.name}
-                                                        placeholderSrc="/path/to/placeholder.jpg" // URL của placeholder image
-                                                        effect="blur" // Hiệu ứng loading
-                                                    />
-                                                );
-                                            } else {
-                                                return null;
-                                            }
-                                        })}
-                                    </div>
+            {currentItems.map((product) => (
+                <div className="card" key={product.id}>
+                    <div className="basicInfo">
+                        <div className="images">
+                            <div className="colors">
+                                {product.colors.map((color) => (
+                                    <div
+                                        key={color}
+                                        className={` ${product.checkImg[color] && 'active'}   `}
+                                        style={{
+                                            marginRight: '10px',
+                                            backgroundColor: color,
+                                            width: 25,
+                                            height: 25,
+                                            borderRadius: '50%',
+                                            cursor: 'pointer',
+                                        }}
+                                        onClick={() => handleChooseColor(product.id, color)}
+                                    ></div>
+                                ))}
+                            </div>
+                            <div className="img">
+                                {Object.keys(product.checkImg).map((item) => {
+                                    if (product.checkImg[item]) {
+                                        return (
+                                            <LazyLoadImage
+                                                key={item}
+                                                src={product.linkImg[item]}
+                                                alt={product.name}
+                                                placeholderSrc="/path/to/placeholder.jpg" // URL của placeholder image
+                                                effect="blur" // Hiệu ứng loading
+                                            />
+                                        );
+                                    } else {
+                                        return null;
+                                    }
+                                })}
+                            </div>
 
-                                </div>
-                                <div className='title'>
-                                    <div className="name">{product.name}</div>
-                                </div><div className="addCard">
-                                    <i className="fa-solid fa-basket-shopping"></i>
-                                </div>
-                            </div>
-                            <div className="mores">
-                                <StarRating rating={product.rating} />
-                                <div className="price">{product.price}</div>
-                            </div>
                         </div>
-                    ))
-                )}
+                        <div className='title'>
+                            <div className="name">{product.name}</div>
+                        </div><div className="addCard">
+                            <i className="fa-solid fa-basket-shopping"></i>
+                        </div>
+                    </div>
+                    <div className="mores">
+                        <StarRating rating={product.rating} />
+                        <div className="price">{product.price}</div>
+                    </div>
+                </div>
+            ))}
+            <div className='pages'>
+                <ReactPaginate
+                    previousLabel={<IoIosArrowBack />}
+                    nextLabel={<IoIosArrowForward />}
+                    breakLabel={'...'}
+                    breakClassName={'break-me'}
+                    pageCount={Math.ceil(products.length / itemsPerPage)}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+
+                    pageClassName="page-item"
+                    pageLinkClassName="page-link"
+                    previousClassName="page-item"
+                    previousLinkClassName="page-link"
+                    nextClassName="page-item"
+                    nextLinkClassName="page-link"
+                    breakLinkClassName="page-link"
+                    containerClassName="pagination"
+                    activeClassName="active"
+                />
+            </div>
         </div>
     );
 };

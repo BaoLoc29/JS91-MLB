@@ -523,7 +523,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 30,
+        id: 31,
         name: 'Giày sneakers unisex cổ thấp Chunky Liner Mid Basic',
         price: '3,790,000đ',
         colors: ['#000000'],
@@ -539,7 +539,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 31,
+        id: 32,
         name: 'Giày sneakers unisex đế bệt thời trang Monogram Lux',
         price: '2,790,000đ',
         colors: ['#7287B6', '#000000'],
@@ -557,7 +557,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 32,
+        id: 33,
         name: 'Giày sneakers unisex cổ thấp Chunky Liner thời trang',
         price: '3,590,000đ',
         colors: ['#DBDA9D', '#1A4B38', '#000000'],
@@ -577,7 +577,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 33,
+        id: 34,
         name: 'Giày sneakers unisex cổ thấp Chunky Liner thời trang',
         price: '3,590,000đ',
         colors: ['#B27B44', '#CBCBBF', '#E1C397'],
@@ -597,7 +597,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 34,
+        id: 35,
         name: 'Giày sneakers unisex đế bệt thời trang Playball Origin',
         price: '590,000đ',
         colors: ['#F4F0E0', '#F39DB2','#A8D8A6', '#000000'],
@@ -618,7 +618,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 35,
+        id: 36,
         name: 'Giày sneakers thời trang Playball Monogram cao cấp',
         price: '2,590,000đ',
         colors: ['#DBBA9F', '#A4B2CF'],
@@ -635,7 +635,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 36,
+        id: 37,
         name: 'Giày sandals unisex đế thấp quai ngang Chunky cao cấp',
         price: '1,890,000đ',
         colors: ['#E4D9C3', '#CCA476', '#CAB8D9', '#56628F','#AEC3BE', '#000000'],
@@ -660,7 +660,7 @@ const DATAGIAY = [
         },
     },
     {
-        id: 37,
+        id: 38,
         name: 'Giày sandals unisex đế thấp quai ngang Chunky cao cấp',
         price: '1,890,000đ',
         colors: ['#56628F', '#000000'],

@@ -1,0 +1,12 @@
+.discount{
+    position: absolute;
+    top: 19px;
+    padding: 3px;
+    background-color: red;
+    color: white;
+    width: 50px;
+    border-radius: 10px;
+}
+.sale{
+    color: white;
+}

@@ -659,7 +659,7 @@ const DATANU = [
         name: 'Quần short ngắn dành cho nữ Logo Boxy Fit thời trang 4In',
         price: '1,790,000đ',
         colors: ['#E9E4DE','#FA79AB', '#01824F', '#1E2F53'],
-        category: 'Áo nữ',
+        category: 'Quần nữ',
         rating: 5,
         checkImg: {
             '#E9E4DE': false,

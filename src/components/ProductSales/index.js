@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Import CSS cho hiệu ứng blur
-import DATANON from '../../api/DataNon';
+import DATASALE from '../../api/DataSale';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ReactPaginate from 'react-paginate';
-const ProductNon = () => {
-    const [products, setProducts] = useState(DATANON);
+import './style.css'
+const ProductSales = () => {
+    const [products, setProducts] = useState(DATASALE);
     const [currentPage, setCurrentPage] = useState(0); 
     const itemsPerPage = 12; 
     const handleChooseColor = (id, color) => {
@@ -39,7 +40,6 @@ const ProductNon = () => {
             </div>
         );
     }
-
     // Get the current items for the current page
     const offset = currentPage * itemsPerPage;
     const currentItems = products.slice(offset, offset + itemsPerPage);
@@ -71,6 +71,7 @@ const ProductNon = () => {
                                     ></div>
                                 ))}
                             </div>
+                            <div className='discount'>{product.discount}</div>
                             <div className="img">
                                 {Object.keys(product.checkImg).map((item) => {
                                     if (product.checkImg[item]) {
@@ -98,7 +99,7 @@ const ProductNon = () => {
                     </div>
                     <div className="mores">
                         <StarRating rating={product.rating} />
-                        <div className="price">{product.price}</div>
+                        <div className="sale">{product.sale}</div>
                     </div>
                 </div>
             ))}
@@ -128,4 +129,4 @@ const ProductNon = () => {
     );
 };
 
-export default ProductNon;
+export default ProductSales;
