@@ -5,7 +5,6 @@ import ProductTuiDeoCheo from '../../components/ProductTuiDeoCheo';
 const TuiDeoCheo = () => {
     return (
         <div className='out-fit'>
-            <h2>Túi đeo chéo</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

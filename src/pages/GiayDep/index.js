@@ -5,7 +5,6 @@ import ProductGiays from '../../components/ProductGiays';
 const GiayDep = () => {
     return (
         <div className='out-fit'>
-            <h2>Giày dép</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

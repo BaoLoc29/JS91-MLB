@@ -1,0 +1,16 @@
+.empty-product{
+    padding: 120px 0 140px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.empty-product span {
+    display: block;
+    width: 100%;
+    color: #BCBCBC;
+    margin-top: 20px;
+}
+.search-product{
+    margin: 50px;
+}

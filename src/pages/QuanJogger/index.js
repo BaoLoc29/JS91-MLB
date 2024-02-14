@@ -5,7 +5,6 @@ import ProductQuanJogger from '../../components/ProductQuanJogger';
 const QuanJogger = () => {
     return (
         <div className='out-fit'>
-            <h2>Quần jogger</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

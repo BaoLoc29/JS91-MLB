@@ -5,7 +5,6 @@ import ProductAoSatNach from '../../components/ProductAoSatNach';
 const AoSatNach = () => {
     return (
         <div className='out-fit'>
-            <h2>Áo sát nách</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

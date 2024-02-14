@@ -6,7 +6,6 @@ import ProductQuanShort from '../../components/ProductQuanShort';
 const QuanShort = () => {
     return (
         <div className='out-fit'>
-            <h2>Quần short</h2>
             <div className='collection'>
                 <div className='title-collection'>
                     <div className='title-collection-inner'>

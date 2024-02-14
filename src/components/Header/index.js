@@ -1,6 +1,21 @@
-import { Link } from 'react-router-dom';
-import './style.css'
-const Header = () => {
+import React, { useState } from 'react';
+import { Link, useNavigate  } from 'react-router-dom';
+import './style.css';
+const Header = ({ onSearch }) => {
+    const [searchField, setSearchField] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = (event) => {
+        const value = event.target.value;
+        setSearchField(value);
+        onSearch(value);
+    };
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            navigate('/search'); 
+            setSearchField('');
+        }
+    };
     return (
         <div className='header'>
             <div className='header-left'>
@@ -68,7 +83,14 @@ const Header = () => {
             </div>
             <div className='header-right'>
                 <div className='search'>
-                    <input type="text" class="search-input" placeholder="Search..." />
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Nhập tên sản phẩm..."
+                        value={searchField}
+                        onChange={handleSearch}
+                        onKeyDown={handleKeyPress}
+                    />
                     <Link className='handleSearch' to="/search"><i className="fa-solid fa-magnifying-glass"></i></Link>
                 </div>
 
