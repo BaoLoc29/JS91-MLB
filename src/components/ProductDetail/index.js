@@ -3,26 +3,23 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { Link, useParams } from 'react-router-dom';
 import { BiRuler } from "react-icons/bi";
-import DATAQUAN from '../../api/DataQuan';
 import DATAAO from '../../api/DataAo';
+import DATAQUAN from '../../api/DataQuan';
 import DATANU from '../../api/DataNu';
-import DATAGIAY from '../../api/DataGiay';
-import DATATUI from '../../api/DataTui';
-import DATANON from '../../api/DataNon';
 import './style.css';
 
 const ProductDetail = () => {
     const { id } = useParams();
-    const productId = parseInt(id);
+    const productId = id;
     const [products, setProducts] = useState([]);
     const [productDetail, setProductDetail] = useState(null);
 
     useEffect(() => {
         // Tải tất cả ba dữ liệu một lúc
-        Promise.all([DATAQUAN, DATAAO, DATANU, DATAGIAY, DATATUI, DATANON])
-            .then(([dataQuan, dataAo, dataNu, dataGiay, dataTui, dataNon]) => {
+        Promise.all([DATAQUAN, DATAAO, DATANU])
+            .then(([dataQuan, dataAo, dataNu]) => {
                 // Kết hợp ba dữ liệu vào mảng products
-                const combinedData = [...dataQuan, ...dataAo, ...dataNu, ...dataGiay, ...dataTui, ...dataNon];
+                const combinedData = [...dataQuan, ...dataAo, ...dataNu];
                 setProducts(combinedData);
             })
             .catch((error) => {
@@ -116,7 +113,7 @@ const ProductDetail = () => {
                                 {productDetail.colors.map((color) => (
                                     <div
                                         key={color}
-                                        className={`item-color ${color === selectedColor ? 'active' : ''}`}
+                                        className={`item-color ${color === selectedColor ? 'active' : ''}`} 
                                         style={{
                                             marginRight: '5px',
                                             backgroundColor: color,

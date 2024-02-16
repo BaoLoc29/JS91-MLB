@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from 'uuid';
 const DATAAO = [
     {
-        id: 1,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn New Year Dragon',
         price: '1,500,000đ',
         colors: ['#83E5FF', '#50C190', '#DEDBD2', '#314469', '#000000'],
@@ -63,7 +64,7 @@ const DATAAO = [
         },
     },
     {
-        id: 2,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn Classic Monogram',
         price: '2,210,000đ',
         colors: ['#000000', '#83E5FF', '#DECAB1'],
@@ -106,7 +107,7 @@ const DATAAO = [
         }
     },
     {
-        id: 3,
+        id: uuidv4(),
         name: 'Áo sơ mi unisex cổ bẻ tay ngắn Mega Dia Monogram',
         price: '3,650,000đ',
         colors: ['#83E5FF', '#DEDBD2'],
@@ -139,7 +140,7 @@ const DATAAO = [
         }
     },
     {
-        id: 4,
+        id: uuidv4(),
         name: 'Áo polo nam tay ngắn Basic Comfortable Fit Collar',
         price: '620,000đ',
         colors: ['#DEDBD2', '#517AAE', '#000000'],
@@ -179,7 +180,7 @@ const DATAAO = [
         }
     },
     {
-        id: 5,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex Basic Mega Logo',
         price: '2,490,000đ',
         colors: ['#DEDBD2', '#442922', '#000000'],
@@ -222,7 +223,7 @@ const DATAAO = [
         }
     },
     {
-        id: 6,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Monative Monogram',
         price: '2,990,000đ',
         colors: ['#E9E5D8', '#CB9864', '#1F2230'],
@@ -265,7 +266,7 @@ const DATAAO = [
         }
     },
     {
-        id: 7,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Mega Bear Winter',
         price: '2,990,000đ',
         colors: ['#28396F', '#EBE7DC'],
@@ -297,7 +298,7 @@ const DATAAO = [
         }
     },
     {
-        id: 10,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Heart Comfortable Fit',
         price: '2,490,000đ',
         colors: ['#000000', '#DFD8C8'],
@@ -330,7 +331,7 @@ const DATAAO = [
         }
     },
     {
-        id: 11,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Diamond Monogram Jacquard',
         price: '3,490,000đ',
         colors: ['#CAA06E', '#55352A', '#000000', '#E3E0D1'],
@@ -384,7 +385,7 @@ const DATAAO = [
         }
     },
     {
-        id: 12,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Classic Monogram',
         price: '3,690,000đ',
         colors: ['#171E2E', '#5188AF', '#DCBCC1', '#DADBD3'],
@@ -437,7 +438,7 @@ const DATAAO = [
         }
     },
     {
-        id: 13,
+        id: uuidv4(),
         name: 'Áo sơ mi denim unisex cổ bẻ tay dài phom suông thời trang',
         price: '4,690,000đ',
         colors: ['#EFC3BA', '#3D608A'],
@@ -471,7 +472,7 @@ const DATAAO = [
         }
     },
     {
-        id: 14,
+        id: uuidv4(),
         name: 'Áo hoodie unisex tay dài phối mũ Basic Mega Logo Overfit',
         price: '3,290,000đ',
         colors: ['#EDEDEA', '#B7B9B9', '#000000'],
@@ -518,7 +519,7 @@ const DATAAO = [
         }
     },
     {
-        id: 15,
+        id: uuidv4(),
         name: 'Áo hoodie unisex tay dài Cube Monogram Big Lux',
         price: '3,290,000đ',
         colors: ['#F3EDE1', '#000000'],
@@ -553,7 +554,7 @@ const DATAAO = [
         }
     },
     {
-        id: 16,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài bo gấu thời trang',
         price: '2,690,000đ',
         colors: ['#A5091E', '#143A83', '#D68C05', '#000000'],
@@ -607,7 +608,7 @@ const DATAAO = [
         }
     },
     {
-        id: 17,
+        id: uuidv4(),
         name: 'Áo sơ mi denim unisex cổ bẻ tay dài Basic Multi Mega',
         price: '4,690,000đ',
         colors: ['#E9E7DA'],
@@ -630,7 +631,7 @@ const DATAAO = [
         }
     },
     {
-        id: 18,
+        id: uuidv4(),
         name: 'Áo thun unisex tay ngắn in hình dễ thương thời trang giới trẻ',
         price: '1,690,000đ',
         colors: ['#283069', '#F1ECE6'],
@@ -663,7 +664,7 @@ const DATAAO = [
         }
     },
     {
-        id: 19,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn trẻ trung thời trang giới trẻ',
         price: '1,590,000đ',
         colors: ['#046250', '#E5E1D6', '#000000'],
@@ -706,7 +707,7 @@ const DATAAO = [
         }
     },
     {
-        id: 20,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn phom suông thời trang',
         price: '1,790,000đ',
         colors: ['#A9A9A7', '#A2C6EA', '#33354E'],
@@ -749,7 +750,7 @@ const DATAAO = [
         }
     },
     {
-        id: 21,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn phom suông hiện đại',
         price: '1,790,000đ',
         colors: ['#A8D3C6', '#E7E7E5', '#EBD5B7', '#000000'],
@@ -803,7 +804,7 @@ const DATAAO = [
         }
     },
     {
-        id: 22,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn in hình dễ thương',
         price: '1,530,000đ',
         colors: ['#EDC7CC', '#EDE7DB', '#045C44', '#000000'],
@@ -853,7 +854,7 @@ const DATAAO = [
         }
     },
     {
-        id: 23,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn hiện đại cho giới trẻ',
         price: '1,030,000đ',
         colors: ['#EDECE2', '#D8DAD7', '#D2B190', '#2D324F', '#000000'],
@@ -917,7 +918,7 @@ const DATAAO = [
         }
     },
     {
-        id: 24,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn Classic Monogram Big Lux',
         price: '1,790,000đ',
         colors: ['#ECE6DA', '#F2D3D8', '#282A37', '#000000'],
@@ -970,7 +971,7 @@ const DATAAO = [
         }
     },
     {
-        id: 25,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn Classic Monogram',
         price: '1,990,000đ',
         colors: ['#729EC1', '#ECE6DA', '#000000'],
@@ -1013,7 +1014,7 @@ const DATAAO = [
         }
     },
     {
-        id: 26,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn Checkerboard Big Lux',
         price: '1,590,000đ',
         colors: ['#000000', '#ECE6DA', '#729EC1'],
@@ -1057,7 +1058,7 @@ const DATAAO = [
         }
     },
     {
-        id: 27,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn Basic Mega Logo',
         price: '1,290,000đ',
         colors: ['#E7E7E5', '#CFAD8A', '#000000'],
@@ -1101,7 +1102,7 @@ const DATAAO = [
         }
     },
     {
-        id: 28,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay dài Varsity thời trang',
         price: '2,290,000đ',
         colors: ['#353439'],
@@ -1124,7 +1125,7 @@ const DATAAO = [
         }
     },
     {
-        id: 29,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay dài Basic Small Logo',
         price: '1,290,000đ',
         colors: ['#7E202E', '#E1DDD5', '#000000'],
@@ -1167,7 +1168,7 @@ const DATAAO = [
         },
     },
     {
-        id: 30,
+        id: uuidv4(),
         name: 'Áo ba lỗ unisex sát nách cổ tròn Basic Big Logo',
         price: '1,090,000đ',
         colors: ['#000000', '#E7E8E8'],
@@ -1200,7 +1201,7 @@ const DATAAO = [
         }
     },
     {
-        id: 31,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay dài Basic Mega Logo',
         price: '1,090,000đ',
         colors: ['#E7E8E8', '#000000'],
@@ -1233,7 +1234,7 @@ const DATAAO = [
         }
     },
     {
-        id: 32,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Varsity thời trang',
         price: '2,290,000đ',
         colors: ['#A27244', '#6C1927', '#000000'],
@@ -1277,7 +1278,7 @@ const DATAAO = [
         }
     },
     {
-        id: 33,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài thời trang',
         price: '2,490,000đ',
         colors: ['#EBE7DC', '#000000'],
@@ -1310,7 +1311,7 @@ const DATAAO = [
         }
     },
     {
-        id: 34,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài form suông thời trang',
         price: '2,990,000đ',
         colors: ['#C691C7', '#C8A584', '#18223C'],
@@ -1353,7 +1354,7 @@ const DATAAO = [
         }
     },
     {
-        id: 35,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Monogram Big Lux',
         price: '2,690,000đ',
         colors: ['#EAE5DB', '#6F7470', '#C4A07C', '#000000'],
@@ -1406,7 +1407,7 @@ const DATAAO = [
         }
     },
     {
-        id: 36,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Like Pop Art',
         price: '2,690,000đ',
         colors: ['#98C1AF', '#DEDACF', '#000000'],
@@ -1449,7 +1450,7 @@ const DATAAO = [
         }
     },
     {
-        id: 37,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Like Daily',
         price: '2,690,000đ',
         colors: ['#DFCAAB', '#B8DFD4', '#D4DADA', '#000000'],
@@ -1503,7 +1504,7 @@ const DATAAO = [
         }
     },
     {
-        id: 38,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Classic Monogram',
         price: '2,690,000đ',
         colors: ['#E3C0C6', '#E1E1D5', '#262D3D', '#000000'],
@@ -1552,7 +1553,7 @@ const DATAAO = [
         }
     },
     {
-        id: 39,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Classic Gradient Monogram',
         price: '3,190,000đ',
         colors: ['#F4F0E5', '#734837', '#000000'],
@@ -1595,7 +1596,7 @@ const DATAAO = [
         }
     },
     {
-        id: 40,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài bo gấu thời trang',
         price: '2,690,000đ',
         colors: ['#D48C07', '#A7091E', '#103880', '#000000'],
@@ -1648,7 +1649,7 @@ const DATAAO = [
         }
     },
     {
-        id: 41,
+        id: uuidv4(),
         name: 'Áo sweatshirt unisex cổ tròn tay dài Basic Bling Mega Logo',
         price: '2,690,000đ',
         colors: ['#1C2842', '#0D3831', '#000000'],
@@ -1691,7 +1692,7 @@ const DATAAO = [
         }
     },
     {
-        id: 42,
+        id: uuidv4(),
         name: 'Áo hoodie unisex tay dài phối mũ Checkerboard Big Lux Mega',
         price: '3,290,000đ',
         colors: ['#EBE7DC', '#000000'],
@@ -1726,7 +1727,7 @@ const DATAAO = [
         }
     },
     {
-        id: 43,
+        id: uuidv4(),
         name: 'Áo hoodie unisex tay dài phối mũ Basic Small Logo',
         price: '2,590,000đ',
         colors: ['#EBE7DC', '#000000'],
@@ -1759,7 +1760,7 @@ const DATAAO = [
         }
     },
     {
-        id: 44,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn trẻ trung thời trang cao cấp',
         price: '1,590,000đ',
         colors: ['#9EC9BF', '#EBE7DC', '#FB82B1', '#000000'],
@@ -1812,7 +1813,7 @@ const DATAAO = [
         }
     },
     {
-        id: 45,
+        id: uuidv4(),
         name: 'Áo thun unisex cổ tròn tay ngắn thời trang',
         price: '1,590,000đ',
         colors: ['#000000', '#EBE7DC'],
@@ -1844,451 +1845,6 @@ const DATAAO = [
                 "https://product.hstatic.net/200000642007/product/50crs_3atse0134_7_9b7dab7d2d5e4720a6bfe9b271ee539e_ca0b54051aa84b49b2c24a6b4428e7a8_master.jpg"
             ]
         }
-    },
-    // {
-    //     id: 45,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn phom suông trẻ trung',
-    //     price: '1,690,000đ',
-    //     colors: ['#EBE7DC','#CE9F70','#8063A6', '#000000'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#EBE7DC': false,
-    //         '#CE9F70': true,
-    //         '#8063A6': false,
-    //         '#000000': false
-    //     },
-
-    //     linkImg: {
-    //         '#EBE7DC': 'https://product.hstatic.net/200000642007/product/50crs_3atsm0234_1_61c7478af18f4ad4bf171d60123d8841_8fedc6623d1b416fb203049046fa3af3_master.jpg',
-    //         '#CE9F70': 'https://product.hstatic.net/200000642007/product/45cal_3atsm0234_1_1b47a7d528524408bc1b8f09d9c1e2b5_5b14f4b0ecda494a946355414d6c8897_master.jpg',
-    //         '#8063A6': 'https://product.hstatic.net/200000642007/product/50ldd_3atsm0234_1_78bd986dbf304810ac73a2b9ea7aea9c_f54950552f7e4f27a80cdf370b194e2a_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3atsm0234_1_5dbc2c792ba2475aa767643f640b51ce_e9978d840ad5476993aaec44269bcbfa_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 46,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn in logo thời trang trẻ trung',
-    //     price: '1,290,000đ',
-    //     colors: ['#D7C5AD','#B98AC0','#025042', '#000000'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#D7C5AD': false,
-    //         '#B98AC0': true,
-    //         '#025042': false,
-    //         '#000000': false
-    //     },
-
-    //     linkImg: {
-    //         '#D7C5AD': 'https://product.hstatic.net/200000642007/product/43bgl_3atsv0234_1_ba6b4d17b33e4a86b5071ce08151c988_15147e4a194e4b04a1d1d89340790aa8_master.jpg',
-    //         '#B98AC0': 'https://product.hstatic.net/200000642007/product/43ldl_3atsv0234_1_31f28f94ff48497d8a572e8339d169f0_24b86010b6d24368bed8021bc036fcf7_master.jpg',
-    //         '#025042': 'https://product.hstatic.net/200000642007/product/07gns_3atsv0234_1_94f475abc2fb43b28ecd05d943f310e6_0c841fd4d919446dad5b0d8799c4d3fe_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3atsv0234_1_9569dd53e79c4e249845f50f555de468_51025e5d6cf14fe3bd0d7420b1e51d66_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 47,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn in logo hiện đại cao cấp',
-    //     price: '1,690,000đ',
-    //     colors: ['#E3E2DE','#CE8A1E','#AB0E23', '#1A3578'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#E3E2DE': false,
-    //         '#CE8A1E': false,
-    //         '#AB0E23': true,
-    //         '#1A3578': false
-    //     },
-
-    //     linkImg: {
-    //         '#E3E2DE': 'https://product.hstatic.net/200000642007/product/50whs_3atsv1134_1_39f9c4c104eb4af6a013c3c84544b5c1_7435cf4be89c4f4980668ef54ca41953_master.jpg',
-    //         '#CE8A1E': 'https://product.hstatic.net/200000642007/product/45msd_3atsv1134_1_9ef7d9caca23496dbe2734e4566e262f_7b4bddacac504f998a8acc853a919708_master.jpg',
-    //         '#AB0E23': 'https://product.hstatic.net/200000642007/product/43rds_3atsv1134_1_56194e0faf6440caa9855d3a2b0d3107_48993ac69aae47c3b1d7d88f85c2e032_master.jpg',
-    //         '#1A3578': 'https://product.hstatic.net/200000642007/product/07cbd_3atsv1134_1_5d6bbeb6c2d34ce6afa0140635a61473_caf4e7367c2940d7a718068507bbb69a_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 48,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn in hình thời trang',
-    //     price: '2,690,000đ',
-    //     colors: ['#EBE7DC', '#000000'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#EBE7DC': true,
-    //         '#000000': false
-    //     },
-
-    //     linkImg: {
-    //         '#EBE7DC': 'https://product.hstatic.net/200000642007/product/50crs_3atsl1134_1_91b07c961b5540baadbc3515ebb0ad23_00fbb063d3c8489c9f208eaac654e92b_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/43bks_3atsl1134_1_07a9c87548ff4c21843fc7ffdacce330_96143bf0dae348c8ae78788cda8cb96f_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 49,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn in hình dễ thương và thời trang',
-    //     price: '1,690,000đ',
-    //     colors: ['#E1DAD0','#CF99D5', '#222D4B'],
-    //     category: 'Áo thun',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#E1DAD0': false,
-    //         '#CF99D5': true,
-    //         '#222D4B': false
-    //     },
-
-    //     linkImg: {
-    //         '#E1DAD0': 'https://product.hstatic.net/200000642007/product/43crs_3atsm1134_1_a23f7b4e894e425aa3fbfb816873fdf6_e060d78dea56433e94bee03367069e91_master.jpg',
-    //         '#CF99D5': 'https://product.hstatic.net/200000642007/product/45ldl_3atsm1134_1_d18c83861a5b417ebc8d7b92e6d6bc1b_92166be2d71f430896aa295606c4f900_master.jpg',
-    //         '#222D4B': 'https://product.hstatic.net/200000642007/product/45nys_3atsm1134_1_d0f8157316e14be5b06c13f8cf8f2565_7b81d9d525ec4b63a2c26282043b1a82_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 50,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn thời trang hiện đại và thời thượng',
-    //     price: '1,690,000đ',
-    //     colors: ['#E1E0DC','#A0CBBA', '#000000'],
-    //     category: 'Áo thun',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#E1E0DC': false,
-    //         '#A0CBBA': true,
-    //         '#000000': false
-    //     },
-
-    //     linkImg: {
-    //         '#E1E0DC': 'https://product.hstatic.net/200000642007/product/07whs_3atsl2134_1_82c8b327809f486dbfa2596585dc498d_ef876ef0c8034de6be3b7ecb0d1b5e91_master.jpg',
-    //         '#A0CBBA': 'https://product.hstatic.net/200000642007/product/45mtl_3atsl2134_1_5d0e13353a0045ae9ff4692f4c234036_7adccec570654e78b23ed4b3b5b621bd_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3atsl2134_1_ec748a723bb547d7ac8911320335c0a5_02e25f51939349668ba93fd71cfb3c87_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 51,
-    //     name: 'Áo thun unisex cổ tròn tay dài thời trang thế hệ mới',
-    //     price: '1,990,000đ',
-    //     colors: ['#EBE7DC', '#000000'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#EBE7DC': true,
-    //         '#000000': false
-    //     },
-
-    //     linkImg: {
-    //         '#EBE7DC': 'https://product.hstatic.net/200000642007/product/50crs_3atsl1034_1_abfb0d1b856443b7898852d4a4093273_f9ce64f2e7fa4af6b9b57357b33e0be2_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/43bks_3atsl1034_1_4494af0d89194aeba6692e21e03edb57_3a58280e2bf543abafd52aeb7374506c_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 52,
-    //     name: 'Áo thun unisex cổ tròn tay dài phom suông hiện đại',
-    //     price: '1,990,000đ',
-    //     colors: ['#EBE7DC', '#131D34'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#EBE7DC': false,
-    //         '#131D34': true
-    //     },
-
-    //     linkImg: {
-    //         '#EBE7DC': 'https://product.hstatic.net/200000642007/product/50crs_3atsb1034_1_3b1f4cb4748a41f28620856e86e3ec08_a6b3443816b34bc392f6df0fcecf451a_master.jpg',
-    //         '#131D34': 'https://product.hstatic.net/200000642007/product/07nys_3atsb1034_1_77237cf55ca845c4ad07da14765d0737_7e502cc42f4f4094b3841a7acec9b6e7_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 53,
-    //     name: 'Áo thun unisex cổ tròn tay dài thời trang hiện đại mới',
-    //     price: '1,990,000đ',
-    //     colors: ['#EBE7DC', '#000000'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#EBE7DC': true,
-    //         '#000000': false
-    //     },
-
-    //     linkImg: {
-    //         '#EBE7DC': 'https://product.hstatic.net/200000642007/product/07whs_3atsl2034_1_976b408584c04ac2b48c3b7f36ae1290_9b6fe832a16b4493a7dcb3ab69416793_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3atsl2034_1_95f383aa132948bb82f18cf7fe9c13a7_93d503a87a04419d85a155ee0d9dec44_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 54,
-    //     name: 'Áo sơ mi denim unisex cổ bẻ tay dài Denim Cube Monogram',
-    //     price: '4,790,000đ',
-    //     colors: ['#191F31'],
-    //     category: 'Áo sơ mi',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#191F31': true,
-    //     },
-
-    //     linkImg: {
-    //         '#191F31': 'https://product.hstatic.net/200000642007/product/50nyd_3adrm0434_9_7f5d645c5a3c41e7ab797ae65c808e13_d43ed91f4a1348719b14208b1d79e529_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 55,
-    //     name: 'Áo sơ mi denim unisex cổ bẻ tay dài Cube Monogram Lux',
-    //     price: '5,790,000đ',
-    //     colors: ['#292C35'],
-    //     category: 'Áo sơ mi',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#292C35': true,
-    //     },
-
-    //     linkImg: {
-    //         '#292C35': 'https://product.hstatic.net/200000642007/product/50nyd_3adrm0734_2_010838af95d1436a8598cfdcc0f601e8_136ab171cbe0459dafcaa6ce2acd739e_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 56,
-    //     name: 'Áo sơ mi unisex tay ngắn Paisley All Over Pattern',
-    //     price: '3,790,000đ',
-    //     colors: ['#000000'],
-    //     category: 'Áo sơ mi',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#000000': true,
-    //     },
-
-    //     linkImg: {
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3awsi0133_2_762ceb852b5c4857ae5bbf641a956f74_85c299b7a4af4b7fa24e0fb1dd1efee8_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 57,
-    //     name: 'Áo sơ mi denim unisex tay ngắn thời trang Paisley Print',
-    //     price: '3,890,000đ',
-    //     colors: ['#6D86AA'],
-    //     category: 'Áo sơ mi',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#6D86AA': true,
-    //     },
-
-    //     linkImg: {
-    //         '#6D86AA': 'https://product.hstatic.net/200000642007/product/50sbl_3adri0133_2_d5aca140a50a40178f7ca65fd5e5c724_fd1bebb793a649f399f3671fca684d38_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 58,
-    //     name: 'Áo sơ mi denim nam tay ngắn Cube Monogram Print',
-    //     price: '3,990,000đ',
-    //     colors: ['#6D86AA'],
-    //     category: 'Áo sơ mi',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#6D86AA': true,
-    //     },
-
-    //     linkImg: {
-    //         '#6D86AA': 'https://product.hstatic.net/200000642007/product/50sbl_3ldrm0633_1_77936309c5a3448e8e8fef5be2cc5c58_7cb027ccdf0a4898887959100aaeea2c_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 59,
-    //     name: 'Áo polo unisex tay ngắn Heart Small Logo Collar',
-    //     price: '2,620,000đ',
-    //     colors: ['#DEDBD2'],
-    //     category: 'Áo polo',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#DEDBD2': true,
-    //     },
-
-    //     linkImg: {
-    //         '#DEDBD2': 'https://product.hstatic.net/200000642007/product/50ivs_3apqh0133_1_6ffec3bbdfb340f3841c4a04a8f161cd_013a6b97ee91425ea2e77cbbb7c8885a_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 60,
-    //     name: 'Áo polo unisex tay ngắn Cube Monogram All Over',
-    //     price: '4,620,000đ',
-    //     colors: ['#544E4E', '#323F80'],
-    //     category: 'Áo polo',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#544E4E': true,
-    //         '#323F80': false
-    //     },
-
-    //     linkImg: {
-    //         '#544E4E': 'https://product.hstatic.net/200000642007/product/43grs_3akpm0533_1_4aa89355983e47058ed0faba625a15bb_238c4ec31da143e4b98caed8dfa8a720_master.jpg',
-    //         '#323F80': 'https://product.hstatic.net/200000642007/product/07bls_3akpm0533_1_86e32d18a108446f83af49a613ddf406_76b0962a0e624c858da39d3f5c2e0252_master.jpg'
-    //     }   
-    // },
-    // {
-    //     id: 61,
-    //     name: 'Áo polo nam tay ngắn Partial Monogram Collar',
-    //     price: '2,620,000đ',
-    //     colors: ['#DEDBD2', '#000000'],
-    //     category: 'Áo polo',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#DEDBD2': true,
-    //         '#000000': false,
-    //     },
-
-    //     linkImg: {
-    //         '#DEDBD2': 'https://product.hstatic.net/200000642007/product/07crs_3lpqm0333_1_d6cd4d13de604e9fb4f274eadfd7a866_3c0a82977493493f9ee71ad8edc7ab52_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3lpqm0333_1_59b1d26ff9d744688200d3a2138d3c58_b17b59bc1a874ae0936b29432264124b_master.jpg',
-    //     }
-    // },
-    // {
-    //     id: 62,
-    //     name: 'Áo polo nam tay ngắn thời trang cao cấp Classic Monogram',
-    //     price: '5,620,000đ',
-    //     colors: ['#DEDBD2','#BFAE94', '#000000'],
-    //     category: 'Áo polo',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#DEDBD2': false,
-    //         '#BFAE94': true,
-    //         '#000000': false,
-    //     },
-
-    //     linkImg: {
-    //         '#DEDBD2': 'https://product.hstatic.net/200000642007/product/07crs_3lpqm0133_1_22a1fe94f80142e38b54760f6532b04d_db368ba4f5d84dd7ac38c4f3cb14a8f4_master.jpg',
-    //         '#BFAE94': 'https://product.hstatic.net/200000642007/product/43bgl_3lpqm0133_1_48c70d43e0444c08930462a046220105_22ee1206b14447a796634ff4578e07b4_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3lpqm0133_1_cd268495fb954632839225e7fd52d682_7b2cfd3da5fd4acc8b4705ce1f42beb3_master.jpg',
-    //     }
-    // },
-    // {
-    //     id: 63,
-    //     name: 'Áo sweatshirt unisex cổ tròn tay dài Monative Monogram',
-    //     price: '2,990,000đ',
-    //     colors: ['#E9E5D8', '#CB9864', '#1F2230'],
-    //     category: 'Áo khoác',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#E9E5D8': false,
-    //         '#CB9864': true,
-    //         '#1F2230': false,
-    //     },
-
-    //     linkImg: {
-    //         '#E9E5D8': 'https://product.hstatic.net/200000642007/product/50crs_3amtm0934_1_75ab53f179a44d02bace35cc12fb472f_2fb20ac59e6243b0b70485e489512930_master.jpg',
-    //         '#CB9864': 'https://product.hstatic.net/200000642007/product/45cal_3amtm0934_1_6b2eafd71d8843fcb509040bb67b45a6_957fc41fd90f4e4296486775d97f9b7c_master.jpg',
-    //         '#1F2230': 'https://product.hstatic.net/200000642007/product/07nyd_3amtm0934_8_73e9970307af427e9a41ce90b1a5fc10_f0ccb083f1c84e28a9540a704ab0a4db_master.jpg',
-    //     }
-    // },
-    // {
-    //     id: 64,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn phom suông thời trang',
-    //     price: '1,790,000đ',
-    //     colors: ['#A2C6EA', '#A9A9A7', '#33354E'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#A2C6EA': false,
-    //         '#A9A9A7': true,
-    //         '#33354E': false
-    //     },
-
-    //     linkImg: {
-    //         '#A2C6EA': 'https://product.hstatic.net/200000642007/product/07bll_3atsm0434_1_3ebec5235f084f32b2b48b2ef88ff6c8_e4696f9bb4304e25b99748661a6c276b_master.jpg',
-    //         '#A9A9A7': 'https://product.hstatic.net/200000642007/product/43mgs_3atsm0434_1_2a3db8cfe09f4100934411255efe700f_9cad2e7b796d46bb938981849bcdb5a0_master.jpg',
-    //         '#33354E': 'https://product.hstatic.net/200000642007/product/07nyd_3atsm0434_1_f0d819babd0e40bfbade15250fd69f54_e2ac84b062304cfcac6c59ff74bf4aa7_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 65,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn phom suông thời trang',
-    //     price: '1,990,000đ',
-    //     colors: ['#A2C6EA', '#A9A9A7', '#33354E'],
-    //     category: 'Áo thun',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#A2C6EA': true,
-    //         '#A9A9A7': false,
-    //         '#33354E': false
-    //     },
-
-    //     linkImg: {
-    //         '#A2C6EA': 'https://product.hstatic.net/200000642007/product/07bll_3atsm0434_1_3ebec5235f084f32b2b48b2ef88ff6c8_e4696f9bb4304e25b99748661a6c276b_master.jpg',
-    //         '#A9A9A7': 'https://product.hstatic.net/200000642007/product/43mgs_3atsm0434_1_2a3db8cfe09f4100934411255efe700f_9cad2e7b796d46bb938981849bcdb5a0_master.jpg',
-    //         '#33354E': 'https://product.hstatic.net/200000642007/product/07nyd_3atsm0434_1_f0d819babd0e40bfbade15250fd69f54_e2ac84b062304cfcac6c59ff74bf4aa7_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 66,
-    //     name: 'Áo thun unisex cổ tròn tay ngắn phom suông thời trang',
-    //     price: '1,790,000đ',
-    //     colors: ['#A2C6EA', '#A9A9A7', '#33354E'],
-    //     category: 'Áo thun',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#A2C6EA': false,
-    //         '#A9A9A7': false,
-    //         '#33354E': true
-    //     },
-
-    //     linkImg: {
-    //         '#A2C6EA': 'https://product.hstatic.net/200000642007/product/07bll_3atsm0434_1_3ebec5235f084f32b2b48b2ef88ff6c8_e4696f9bb4304e25b99748661a6c276b_master.jpg',
-    //         '#A9A9A7': 'https://product.hstatic.net/200000642007/product/43mgs_3atsm0434_1_2a3db8cfe09f4100934411255efe700f_9cad2e7b796d46bb938981849bcdb5a0_master.jpg',
-    //         '#33354E': 'https://product.hstatic.net/200000642007/product/07nyd_3atsm0434_1_f0d819babd0e40bfbade15250fd69f54_e2ac84b062304cfcac6c59ff74bf4aa7_master.jpg'
-    //     }
-    // },
-    // {
-    //     id: 67,
-    //     name: 'Áo polo nam tay ngắn Basic Comfortable Fit Collar',
-    //     price: '620,000đ',
-    //     colors: ['#DEDBD2', '#517AAE', '#000000'],
-    //     category: 'Áo polo',
-    //     rating: 5,
-    //     checkImg: {
-    //         '#DEDBD2': false,
-    //         '#517AAE': true,
-    //         '#000000': false,
-    //     },
-
-    //     linkImg: {
-    //         '#DEDBD2': 'https://product.hstatic.net/200000642007/product/43ivs_3lpqb0133_1_b4ac972faacc4a3386328bf247a7ddb8_9d3d266b0efd401696b5cd75525dab66_master.jpg',
-    //         '#517AAE': 'https://product.hstatic.net/200000642007/product/07cbl_3lpqb0133_1_8c934f6e2e04476482ca6e11a1098e68_1880de3b53b04449a7768fc2188ec29e_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3lpqb0133_1_d243d24b95bc4f2c91018ed5f4bbdef0_dab59ee1ce214162ba0ec4cf04bac9e0_master.jpg',
-    //     }
-    // }
-    // ,
-    // {
-    //     id: 68,
-    //     name: 'Áo polo nam tay ngắn Basic Comfortable Fit Collar',
-    //     price: '620,000đ',
-    //     colors: ['#DEDBD2', '#517AAE', '#000000'],
-    //     category: 'Áo polo',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#DEDBD2': false,
-    //         '#517AAE': false,
-    //         '#000000': true,
-    //     },
-
-    //     linkImg: {
-    //         '#DEDBD2': 'https://product.hstatic.net/200000642007/product/43ivs_3lpqb0133_1_b4ac972faacc4a3386328bf247a7ddb8_9d3d266b0efd401696b5cd75525dab66_master.jpg',
-    //         '#517AAE': 'https://product.hstatic.net/200000642007/product/07cbl_3lpqb0133_1_8c934f6e2e04476482ca6e11a1098e68_1880de3b53b04449a7768fc2188ec29e_master.jpg',
-    //         '#000000': 'https://product.hstatic.net/200000642007/product/50bks_3lpqb0133_1_d243d24b95bc4f2c91018ed5f4bbdef0_dab59ee1ce214162ba0ec4cf04bac9e0_master.jpg',
-    //     }
-    // },
-    // {
-    //     id: 69,
-    //     name: 'Áo polo unisex tay ngắn Cube Monogram All Over',
-    //     price: '4,920,000đ',
-    //     discount: null,
-    //     colors: ['#544E4E', '#323F80'],
-    //     category: 'Áo polo',
-    //     rating: 4,
-    //     checkImg: {
-    //         '#544E4E': false,
-    //         '#323F80': true
-    //     },
-
-    //     linkImg: {
-    //         '#544E4E': 'https://product.hstatic.net/200000642007/product/43grs_3akpm0533_1_4aa89355983e47058ed0faba625a15bb_238c4ec31da143e4b98caed8dfa8a720_master.jpg',
-    //         '#323F80': 'https://product.hstatic.net/200000642007/product/07bls_3akpm0533_1_86e32d18a108446f83af49a613ddf406_76b0962a0e624c858da39d3f5c2e0252_master.jpg'
-    //     }   
-    // }
+    }
 ];
 export default DATAAO;
