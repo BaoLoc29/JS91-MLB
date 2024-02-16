@@ -4,6 +4,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css'; // Import CSS cho
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router-dom';
+
 const ProductAoSomi = () => {
     const [products, setProducts] = useState([]);
 
@@ -76,27 +78,27 @@ const ProductAoSomi = () => {
                                     ></div>
                                 ))}
                             </div>
-                            <div className="img">
-                                {Object.keys(product.checkImg).map((item) => {
-                                    if (product.checkImg[item]) {
-                                        return (
+                            <Link to={`/product/${product.id}`}>
+                                <div className="img">
+                                    {product.colors.map((color) => {
+                                        const isSelected = product.checkImg[color];
+                                        const imageUrl = isSelected && product.linkImg[color] && product.linkImg[color][0];
+                                        return imageUrl ? (
                                             <LazyLoadImage
-                                                key={item}
-                                                src={product.linkImg[item]}
+                                                key={color}
+                                                src={imageUrl}
                                                 alt={product.name}
-                                                placeholderSrc="/path/to/placeholder.jpg" // URL của placeholder image
-                                                effect="blur" // Hiệu ứng loading
+                                                placeholderSrc="/path/to/placeholder.jpg"
+                                                effect="blur"
                                             />
-                                        );
-                                    } else {
-                                        return null;
-                                    }
-                                })}
-                            </div>
+                                        ) : null;
+                                    })}
+                                </div>
+                            </Link>
 
                         </div>
                         <div className='title'>
-                            <div className="name">{product.name}</div>
+                            <Link to={`/product/${product.id}`}><div className="name">{product.name}</div></Link>
                         </div><div className="addCard">
                             <i className="fa-solid fa-basket-shopping"></i>
                         </div>

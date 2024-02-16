@@ -33,6 +33,7 @@ import Search from './pages/Search';
 import AoNu from './pages/AoNu';
 import QuanNu from './pages/QuanNu';
 import ChanVay from './pages/ChanVay';
+import ProductDetail from './components/ProductDetail';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -45,6 +46,7 @@ function App() {
       <Header onSearch={handleSearch} searchTerm={searchTerm}/>
       <Routes >
         <Route path="/" element={<Home />} />
+        <Route path='/product/:id' element={<ProductDetail/>} />
         <Route path="/quan-ao" element={<QuanAo />} />
         <Route path="/ao" element={<Ao />} />
         <Route path="/ao-thun" element={<AoThun />} />

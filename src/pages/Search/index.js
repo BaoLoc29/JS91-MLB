@@ -10,7 +10,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ReactPaginate from 'react-paginate';
 import './style.css';
-
+import { Link } from 'react-router-dom';
 const Search = ({ searchTerm }) => {
     const [products, setProducts] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
@@ -124,26 +124,26 @@ const Search = ({ searchTerm }) => {
                                             ></div>
                                         ))}
                                     </div>
-                                    <div className="img">
-                                        {Object.keys(product.checkImg).map((item) => {
-                                            if (product.checkImg[item]) {
-                                                return (
+                                    <Link to={`/product/${product.id}`}>
+                                        <div className="img">
+                                            {product.colors.map((color) => {
+                                                const isSelected = product.checkImg[color];
+                                                const imageUrl = isSelected && product.linkImg[color] && product.linkImg[color][0];
+                                                return imageUrl ? (
                                                     <LazyLoadImage
-                                                        key={item}
-                                                        src={product.linkImg[item]}
+                                                        key={color}
+                                                        src={imageUrl}
                                                         alt={product.name}
                                                         placeholderSrc="/path/to/placeholder.jpg"
                                                         effect="blur"
                                                     />
-                                                );
-                                            } else {
-                                                return null;
-                                            }
-                                        })}
-                                    </div>
+                                                ) : null;
+                                            })}
+                                        </div>
+                                    </Link>
                                 </div>
                                 <div className='title'>
-                                    <div className="name">{product.name}</div>
+                                    <Link to={`/product/${product.id}`}><div className="name">{product.name}</div></Link>
                                 </div>
                                 <div className="addCard">
                                     <i className="fa-solid fa-basket-shopping"></i>
@@ -157,27 +157,27 @@ const Search = ({ searchTerm }) => {
                     ))
                 )}
                 <div className='pages'>
-                <ReactPaginate
-                    previousLabel={<IoIosArrowBack />}
-                    nextLabel={<IoIosArrowForward />}
-                    breakLabel={'...'}
-                    breakClassName={'break-me'}
-                    pageCount={Math.ceil(searchResults.length / itemsPerPage)}
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={3}
-                    onPageChange={handlePageClick}
+                    <ReactPaginate
+                        previousLabel={<IoIosArrowBack />}
+                        nextLabel={<IoIosArrowForward />}
+                        breakLabel={'...'}
+                        breakClassName={'break-me'}
+                        pageCount={Math.ceil(searchResults.length / itemsPerPage)}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={3}
+                        onPageChange={handlePageClick}
 
-                    pageClassName="page-item"
-                    pageLinkClassName="page-link"
-                    previousClassName="page-item"
-                    previousLinkClassName="page-link"
-                    nextClassName="page-item"
-                    nextLinkClassName="page-link"
-                    breakLinkClassName="page-link"
-                    containerClassName="pagination"
-                    activeClassName="active"
-                />
-            </div>
+                        pageClassName="page-item"
+                        pageLinkClassName="page-link"
+                        previousClassName="page-item"
+                        previousLinkClassName="page-link"
+                        nextClassName="page-item"
+                        nextLinkClassName="page-link"
+                        breakLinkClassName="page-link"
+                        containerClassName="pagination"
+                        activeClassName="active"
+                    />
+                </div>
             </div>
         </div>
     );
